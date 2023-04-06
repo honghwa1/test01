@@ -1,0 +1,22 @@
+from selenium.webdriver import ActionChains
+
+# chatGPT #
+driver = webdriver.Chrome()
+
+url = ""
+driver.get(url)
+driver.implicitly_wait(5)
+
+qu = input("qu : ")
+
+
+# DALL-E-2 #
+driver = webdriver.Chrome()
+
+url = "https://labs.openai.com/"
+driver.get(url)
+driver.implicitly_wait(5)
+
+driver.find_element(By.XPATH, '//*[@id="root"]/div[1]/div/div/div/div/div[2]/form/input').send_keys('')
+driver.find_element(By.XPATH, '//*[@id="root"]/div[1]/div/div/div/div/div[2]/form/button').click()
+driver.implicitly_wait(15)
